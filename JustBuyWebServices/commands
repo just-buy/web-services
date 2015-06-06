@@ -1,0 +1,14 @@
+# Create database justbuy in mysql db manually.
+Command: mysql -uroot
+         create database justbuy;
+
+# Go to JustBuyWebservices Folder
+
+# To build package (i.e jar) after making changes
+Command: mvn package -Dmaven.test.skip=true
+
+# To run Server and deploy webservices
+Command:  java -jar target/just-buy-dropwizard-1.0-SNAPSHOT.jar server
+
+# After starting server, it automatically initializes tables with some entries.
+

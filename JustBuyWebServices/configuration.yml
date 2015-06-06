@@ -1,0 +1,13 @@
+# User login.
+login: javaeeeee
+# User  password.
+password: crimson
+
+#Server configuration.
+server:
+    applicationConnectors:
+        - type: http
+          port: 8080
+        - type: https
+          port: 8443
+          validateCerts: false
