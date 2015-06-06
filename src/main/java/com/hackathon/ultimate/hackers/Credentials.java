@@ -1,10 +1,6 @@
 package com.hackathon.ultimate.hackers;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @EqualsAndHashCode
 @ToString
@@ -12,11 +8,11 @@ import lombok.ToString;
 @Getter
 @Setter
 public class Credentials {
-	private final String username;
-	private final String password;
+    private final String username;
+    private final String password;
 
-	public Credentials() {
-		this.username = "";
-		this.password = "";
-	}
+    public Credentials() {
+        this.username = "";
+        this.password = "";
+    }
 }

@@ -6,14 +6,14 @@ import com.hackathon.ultimate.hackers.config.HibernateModule;
 
 public class ManagerTest2 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Injector injector = Guice.createInjector(new HibernateModule());
-		JustBuyManager manager = injector.getInstance(JustBuyManager.class);
-		if (manager == null) {
-			System.out.println("null");
-		}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Injector injector = Guice.createInjector(new HibernateModule());
+        JustBuyManager manager = injector.getInstance(JustBuyManager.class);
+        if (manager == null) {
+            System.out.println("null");
+        }
 
-	}
+    }
 
 }
