@@ -58,27 +58,8 @@ public class JustBuyManager {
 	@SuppressWarnings("unchecked")
 	public List<Item> getItemsInCategory(final Integer categoryId)
 			throws Exception {
-		Session session = sessionFactory.openSession();
-		Transaction tx = null;
-		try {
-			tx = session.beginTransaction();
-			List<Item> items = session
-					.createQuery("FROM Category where id=:categoryId")
-					.setInteger("categoryId", categoryId)
-					.list();
-			tx.commit();
-			log.debug(
-					"Successfully queried all items {} in category with id {}",
-					items, categoryId);
-			return items;
-		} catch (HibernateException e) {
-			if (tx != null)
-				tx.rollback();
-			e.printStackTrace();
-		} finally {
-			session.close();
-		}
-		return null;
+		Category category = getCategory(categoryId);
+		return new ArrayList<Item>(category.getItems());
 	}
 
 	public Category getCategory(final Integer categoryId) throws Exception {

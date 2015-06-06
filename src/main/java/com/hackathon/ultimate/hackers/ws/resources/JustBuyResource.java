@@ -139,7 +139,9 @@ public class JustBuyResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
 	public List<Category> getCategories() throws Exception {
-        return justBuyManager.getCategories();
+		List<Category> categories = justBuyManager.getCategories();
+		log.info("Categories are {}", categories);
+		return categories;
     }
 
 	/**
@@ -155,7 +157,12 @@ public class JustBuyResource {
 	public List<Item> getItemsInCategory(
 			@PathParam(value = "categoryId") Integer categoryId)
 			throws Exception {
-		return justBuyManager.getItemsInCategory(categoryId);
+		List<Item> itemsInCategory = justBuyManager
+				.getItemsInCategory(categoryId);
+		log.info("categoryId {}", categoryId);
+		log.info("items size {}", itemsInCategory.size());
+		log.info("Items in category {} are {}", categoryId, itemsInCategory);
+		return itemsInCategory;
 	}
 
 	/**
