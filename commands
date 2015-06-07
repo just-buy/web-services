@@ -11,4 +11,3 @@ Command: mvn package -Dmaven.test.skip=true
 Command:  java -jar target/just-buy-dropwizard-1.0-SNAPSHOT.jar server
 
 # After starting server, it automatically initializes tables with some entries.
-
